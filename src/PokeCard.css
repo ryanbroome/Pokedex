@@ -1,0 +1,76 @@
+.App {
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2c08d530-29ab-442b-9b52-6ed6969f2bd7/d8i3udq-c83b045c-859b-4ef9-9023-cef58008b879.png/v1/fill/w_1024,h_576,q_80,strp/pokemon_landscape_by_brainblower_d8i3udq-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc2IiwicGF0aCI6IlwvZlwvMmMwOGQ1MzAtMjlhYi00NDJiLTliNTItNmVkNjk2OWYyYmQ3XC9kOGkzdWRxLWM4M2IwNDVjLTg1OWItNGVmOS05MDIzLWNlZjU4MDA4Yjg3OS5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.Stt6KzljYUqBWRuwXLsbeiJZsxuGoAcZYXSgaFl2iQU");
+}
+
+.Pokedex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.PokeCard {
+    width: 200px;
+    padding: 20px;
+    margin: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f9f9f943;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: url('./cardBack.png');
+    background-size: cover;
+}
+
+/* https://i.redd.it/t9ly7ltc9un81.png */
+.PokeCard:hover {
+    width: 200px;
+    padding: 20px;
+    margin: 15px;
+    border: 1px solid #3290fc;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f7ff056f;
+    background-image: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the image within the card */
+.PokeCard-img {
+    visibility: hidden;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.PokeCard:hover .PokeCard-img {
+    visibility: visible;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* Style headings and paragraphs within the card */
+.PokeCard-title {
+    visibility: hidden;
+    margin: 10px 0;
+    color: #333;
+}
+
+.PokeCard:hover .PokeCard-title {
+    visibility: visible;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* refactor, maybe separate out common style attribute { visibility:hidden  vs visibility: visible when hover PokeCard} */
+.PokeCard ul {
+    visibility: hidden;
+}
+
+.PokeCard:hover ul {
+    visibility: visible;
+}
